@@ -1,3 +1,86 @@
+.source-code-link {
+  float: right;
+  text-decoration: none;
+  color: #3ba3d7;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+.examples__events-log {
+  width: 300px;
+  margin: 20px 0;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  overflow: auto;
+}
+.examples__events-log__event {
+  margin-bottom: 10px;
+}
+.examples__events-log__event--placeholder {
+  color: #aaa;
+}
+.examples__events-log__event-description {
+  font-weight: bold;
+}
+.examples__events-log__event--suggestion-selected .examples__events-log__event-description {
+  color: #1cb30c;
+}
+.examples__events-log__event--suggestion-focused .examples__events-log__event-description {
+  color: #3ba3d7;
+}
+.examples__events-log__event--suggestion-unfocused .examples__events-log__event-description {
+  color: #777;
+}
+.examples__events-log__event--input-changed .examples__events-log__event-description {
+  color: #ff7e00;
+}
+.examples__events-log__event--input-blurred .examples__events-log__event-description {
+  color: #000000;
+}
+.examples {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.examples__column {
+  display: flex;
+  flex-direction: column;
+}
+.examples__menu {
+  flex-shrink: 0;
+  min-width: 180px;
+  padding-top: 10px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.examples__menu-item {
+  padding: 5px 0;
+  color: #777;
+  cursor: pointer;
+}
+.examples__menu-item--active {
+  color: #ff0000;
+  cursor: default;
+}
+.examples__events-log-wrapper {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  margin-bottom: 20px;
+}
+.examples__events-log-wrapper button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: #999;
+}
+.examples__events-log-wrapper button:hover {
+  color: #000;
+}
 .react-autosuggest {
   position: relative;
 }
@@ -59,78 +142,6 @@
 .badges a {
   margin-right: 5px;
 }
-.examples__events-log {
-  width: 300px;
-  margin: 20px 0;
-  padding-top: 20px;
-  border-top: 1px solid #ddd;
-  font-size: 12px;
-  overflow: auto;
-}
-.examples__events-log__event {
-  margin-bottom: 10px;
-}
-.examples__events-log__event--placeholder {
-  color: #aaa;
-}
-.examples__events-log__event-description {
-  font-weight: bold;
-}
-.examples__events-log__event--suggestion-selected .examples__events-log__event-description {
-  color: #1cb30c;
-}
-.examples__events-log__event--suggestion-focused .examples__events-log__event-description {
-  color: #3ba3d7;
-}
-.examples__events-log__event--suggestion-unfocused .examples__events-log__event-description {
-  color: #777;
-}
-.examples__events-log__event--input-changed .examples__events-log__event-description {
-  color: #ff7e00;
-}
-.examples {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-.examples__column {
-  display: flex;
-  flex-direction: column;
-}
-.examples__menu {
-  flex-shrink: 0;
-  min-width: 180px;
-  padding-top: 10px;
-  font-size: 18px;
-  border-radius: 4px;
-}
-.examples__menu-item {
-  padding: 5px 0;
-  color: #777;
-  cursor: pointer;
-}
-.examples__menu-item--active {
-  color: #ff0000;
-  cursor: default;
-}
-.examples__events-log-wrapper {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-  margin-bottom: 20px;
-}
-.examples__events-log-wrapper button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  color: #999;
-}
-.examples__events-log-wrapper button:hover {
-  color: #000;
-}
 .footer {
   display: flex;
   flex-shrink: 0;
@@ -148,14 +159,6 @@
 .footer a {
   text-decoration: none;
   color: #3ba3d7;
-}
-.source-code-link {
-  float: right;
-  text-decoration: none;
-  color: #3ba3d7;
-  font-size: 12px;
-  margin-top: 3px;
-  margin-right: 5px;
 }
 html,
 body {

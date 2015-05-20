@@ -25,9 +25,13 @@ function getSuggestions(input, callback) {
   setTimeout(() => callback(null, suggestions), 300);
 }
 
-export default class EventsPlayground extends Component {
+export default class EventsPlayground extends Component { // eslint-disable-line no-shadow
   static propTypes = {
     onEventAdded: PropTypes.func.isRequired
+  }
+
+  componentDidMount() {
+    document.getElementById('events-playground').focus();
   }
 
   onSuggestionSelected(suggestion, event) {
@@ -59,11 +63,18 @@ export default class EventsPlayground extends Component {
     });
   }
 
+  onInputBlurred() {
+    this.props.onEventAdded({
+      type: 'input-blurred'
+    });
+  }
+
   render() {
     const inputAttributes = {
       id: 'events-playground',
       placeholder: 'Where are you now?',
-      onChange: this.onInputChanged.bind(this)
+      onChange: this.onInputChanged.bind(this),
+      onBlur: this.onInputBlurred.bind(this)
     };
 
     return (
@@ -72,8 +83,7 @@ export default class EventsPlayground extends Component {
                      onSuggestionSelected={this.onSuggestionSelected.bind(this)}
                      onSuggestionFocused={this.onSuggestionFocused.bind(this)}
                      onSuggestionUnfocused={this.onSuggestionUnfocused.bind(this)}
-                     inputAttributes={inputAttributes}
-                     ref={ () => document.getElementById('events-playground').focus() } />
+                     inputAttributes={inputAttributes} />
         <SourceCodeLink file="examples/src/EventsPlayground/EventsPlayground.js" />
       </div>
     );
